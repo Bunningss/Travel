@@ -1,0 +1,277 @@
+/* Default*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+:root {
+  --overlay-color: #eeeeee;
+  --header-large: 5rem;
+  --header-small: 4rem;
+  --text-size: 1.1rem;
+  --hover-color: #03a9f4;
+}
+
+/* preloader */
+.preloader {
+  z-index: 100000;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #fff url(../img/Polygon-Loading.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+}
+
+.preloader img {
+}
+
+/* Landing */
+.landing video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.landing {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.landing.active {
+  right: 300px;
+}
+
+.toggle {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: url(../img/hamburger.png);
+  filter: invert(1);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  transition: all 0.4s ease;
+}
+
+.toggle-img {
+  height: 100%;
+  width: 100%;
+}
+
+.landing-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url(../img/close.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  filter: invert(1);
+}
+
+.text {
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: var(--overlay-color); */
+  mix-blend-mode: overlay;
+}
+
+.text h2 {
+  font-size: var(--header-large);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: var(--header-small);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: var(--text-size);
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1rem;
+  background: #fff;
+  padding: 10px 30px;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+/* Landing Mobile */
+
+@media screen and (max-width: 800px) {
+  .landing,
+  .landing-header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3rem;
+  }
+
+  .text-h3 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .landing,
+  .landing-header {
+    padding: 20px;
+  }
+
+  .text h2 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .text h3 {
+    font-size: 2rem;
+  }
+
+  .landing.active {
+    right: 250px;
+  }
+}
+
+/* Socials */
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  filter: invert(1);
+  margin-right: 20px;
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(0.9) translateY(-15px);
+}
+
+.social img {
+  width: 40px;
+}
+
+@media screen and (max-width: 400px) {
+  .social {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social li a {
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.6);
+    transition: 0.5s;
+  }
+
+  .social li a:hover {
+    transform: scale(0.7) translateY(-10px);
+  }
+}
+
+/* Menu */
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #7f7fd5;
+  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+  line-height: 3;
+  margin-left: 1rem;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #111;
+  font-size: 1.5rem;
+}
+
+.menu ul li a:hover {
+  color: #03a9f4;
+}
