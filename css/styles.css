@@ -28,11 +28,8 @@
   background-size: 20%;
 }
 
-.preloader img {
-}
-
 /* Landing */
-.landing video {
+.landing > video {
   position: absolute;
   top: 0;
   left: 0;
@@ -119,26 +116,26 @@
   mix-blend-mode: overlay;
 }
 
-.text h2 {
+.text > h2 {
   font-size: var(--header-large);
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.text h3 {
+.text > h3 {
   font-size: var(--header-small);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.text p {
+.text > p {
   font-size: var(--text-size);
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
 }
 
-.text a {
+.text > a {
   display: inline-block;
   font-size: 1rem;
   background: #fff;
@@ -151,7 +148,7 @@
   transition: 0.3s;
 }
 
-.text a:hover {
+.text > a:hover {
   letter-spacing: 6px;
 }
 
@@ -163,11 +160,11 @@
     padding: 40px;
   }
 
-  .text h2 {
+  .text > h2 {
     font-size: 3rem;
   }
 
-  .text-h3 {
+  .text > h3 {
     font-size: 2rem;
   }
 }
@@ -178,12 +175,12 @@
     padding: 20px;
   }
 
-  .text h2 {
+  .text > h2 {
     font-size: 3rem;
     line-height: 1;
   }
 
-  .text h3 {
+  .text > h3 {
     font-size: 2rem;
   }
 
@@ -202,11 +199,11 @@
   align-items: center;
 }
 
-.social li {
+.social > li {
   list-style: none;
 }
 
-.social li a {
+.social > li > a {
   display: inline-block;
   filter: invert(1);
   margin-right: 20px;
@@ -214,11 +211,11 @@
   transition: 0.5s;
 }
 
-.social li a:hover {
+.social > li > a:hover {
   transform: scale(0.9) translateY(-15px);
 }
 
-.social img {
+.social > li > a > img {
   width: 40px;
 }
 
@@ -231,7 +228,7 @@
     align-items: center;
   }
 
-  .social li a {
+  .social > li > a {
     display: inline-block;
     filter: invert(1);
     margin-right: 20px;
@@ -239,7 +236,7 @@
     transition: 0.5s;
   }
 
-  .social li a:hover {
+  .social > li > a:hover {
     transform: scale(0.7) translateY(-10px);
   }
 }
@@ -259,19 +256,31 @@
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
 }
 
-.menu ul {
+.menu > ul {
   position: relative;
   list-style: none;
   line-height: 3;
   margin-left: 1rem;
 }
 
-.menu ul li a {
+.menu > ul > li > a {
   text-decoration: none;
   color: #111;
   font-size: 1.5rem;
 }
 
-.menu ul li a:hover {
-  color: #03a9f4;
+.menu > ul > li > a:hover {
+  background: #03001e;
+  background: -webkit-linear-gradient(
+    to right,
+    #fdeff9,
+    #ec38bc,
+    #7303c0,
+    #03001e
+  );
+  background: linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e);
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
